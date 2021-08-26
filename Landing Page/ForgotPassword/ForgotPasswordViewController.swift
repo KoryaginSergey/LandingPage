@@ -59,7 +59,7 @@ class ForgotPasswordViewController: UIViewController {
 extension ForgotPasswordViewController: ForgotPasswordViewDelegate {
     
     func viewContinueAction(view: ForgotPasswordViewProtocol) {
-        
+        dismiss(animated: true, completion: nil)
     }
 
 }

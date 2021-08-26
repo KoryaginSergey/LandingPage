@@ -15,6 +15,8 @@ class TextInputFieldView: UIView {
     @IBOutlet private weak var fieldForEyeImageView: UIImageView!
     @IBOutlet private weak var borderLabel: UILabel!
     
+    var eyeIsEnable = true
+    
     
     let myBlueColor = UIColor.init(red: 68/255, green: 20/255, blue: 214/255, alpha: 1.0)
     
@@ -40,13 +42,35 @@ class TextInputFieldView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+        fieldForInputTextField.delegate = self
     }
     
-    public var snapshot: State? {
+    
+    @IBAction func selectEyeAction(_ sender: Any) {
+        guard (snapshot?.rightImage) != nil else {return}
+        if eyeIsEnable {
+        snapshot?.rightImage = UIImage(named: "eye-slash")?.withTintColor(.systemGray2, renderingMode: .alwaysOriginal)
+        eyeIsEnable = false
+        print("Hello World")
+        } else {
+            snapshot?.rightImage = UIImage(named: "eye")?.withTintColor(.systemGray2, renderingMode: .alwaysOriginal)
+            eyeIsEnable = true
+        }
+    }
+    
+       public var snapshot: State? {
         didSet {
             updateUI()
         }
     }
+}
+
+extension TextInputFieldView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+  
+    
 }
 
 

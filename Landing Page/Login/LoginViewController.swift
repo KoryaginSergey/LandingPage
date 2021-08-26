@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var secondTitleLabel: UILabel!
     @IBOutlet weak var thirdTitleLabel: UILabel!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var viewForInputTextView: UIView!
     @IBOutlet weak var viewForInputUsernameView: UIView!
     @IBOutlet weak var viewForInputPasswordView: UIView!
@@ -34,6 +36,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         setValuesLoginViewController()
+        
         
         
         let inputUsernameView: TextInputFieldView = TextInputFieldView.create()
@@ -65,18 +68,23 @@ class LoginViewController: UIViewController {
     @IBAction func scanQRCodeButton(_ sender: Any) {
     }
     
+    
 }
+
 
 private extension LoginViewController {
     
     func setValuesLoginViewController() {
         mainTitleLabel.text = "Appella"
         mainTitleLabel.font = UIFont.systemFont(ofSize: 28, weight: .black)
-        mainTitleIconImageView.image = UIImage(named: "piano1")
+        mainTitleIconImageView.image = UIImage(named: "piano2")
         secondTitleLabel.text = "Let's get started."
         secondTitleLabel.textColor = myBlueColor
         secondTitleLabel.font = UIFont.systemFont(ofSize: 28, weight: .heavy)
-        thirdTitleLabel.text = "Make the school app your personal assistant"
+        thirdTitleLabel.text = """
+        Make the school app
+        your personal assistant
+        """
         thirdTitleLabel.font = UIFont.systemFont(ofSize: 17, weight: .thin)
         
         passwordRecoveryButton.tintColor = myBlueColor
@@ -84,7 +92,7 @@ private extension LoginViewController {
         signInButton.layer.cornerRadius = 10
         scanQRCodeButton.tintColor = myBlueColor
         
-        fieldForImageView.image = UIImage(named: "figure")
+        fieldForImageView.image = UIImage(named: "back2")
         
     }
     

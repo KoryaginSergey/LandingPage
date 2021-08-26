@@ -56,18 +56,15 @@ class ForgotPasswordView: UIView, ForgotPasswordViewProtocol {
     
     @IBAction func continueButton(_ sender: Any) {
         self.delegate?.viewContinueAction(view: self)
+        
     }
 }
 
 private extension ForgotPasswordView {
     func setupUI() {
         viewForInputMail.addSubview(inputMailView)
-        NSLayoutConstraint.activate([
-            inputMailView.topAnchor.constraint(equalTo: viewForInputMail.topAnchor, constant: 0.0),
-            inputMailView.bottomAnchor.constraint(equalTo: viewForInputMail.bottomAnchor, constant: 0.0),
-            inputMailView.leftAnchor.constraint(equalTo: viewForInputMail.leftAnchor, constant: 0.0),
-            inputMailView.rightAnchor.constraint(equalTo: viewForInputMail.rightAnchor, constant: 0.0)
-        ])
+        inputMailView.translatesAutoresizingMaskIntoConstraints = false
+        inputMailView.layoutAttachAll(to: viewForInputMail)
     }
     
     func setValuesForgotPasswordView() {
