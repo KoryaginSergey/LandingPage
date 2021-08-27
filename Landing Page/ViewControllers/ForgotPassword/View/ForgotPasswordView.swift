@@ -8,12 +8,14 @@
 
 import UIKit
 
+
 // MARK: - ForgotPasswordViewDelegate
 
 protocol ForgotPasswordViewDelegate: class {
 
     func viewContinueAction(view: ForgotPasswordViewProtocol)
 }
+
 
 // MARK: - ForgotPasswordViewProtocol
 
@@ -22,6 +24,7 @@ protocol ForgotPasswordViewProtocol: UIView {
     func setState(_ state:TextInputFieldView.State)
     var delegate: ForgotPasswordViewDelegate? { get set }
 }
+
 
 // MARK: - ForgotPasswordView
 
@@ -36,27 +39,24 @@ class ForgotPasswordView: UIView, ForgotPasswordViewProtocol {
 
     // MARK: - ForgotPasswordView interface methods
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var viewForInputMail: UIView!
-    @IBOutlet weak var continueButton: UIButton!
-    
-    let myBlueColor = UIColor.init(red: 68/255, green: 20/255, blue: 214/255, alpha: 1.0)
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var viewForInputMail: UIView!
+    @IBOutlet private weak var continueButton: UIButton!
     
     weak var delegate: ForgotPasswordViewDelegate?
+    
 
     // MARK: - Overrided methods
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+    
         setupUI()
         setValuesForgotPasswordView()
-        
     }
     
     @IBAction func continueButton(_ sender: Any) {
         self.delegate?.viewContinueAction(view: self)
-        
     }
 }
 
@@ -73,6 +73,5 @@ private extension ForgotPasswordView {
         
         continueButton.layer.cornerRadius = 10
         continueButton.backgroundColor = myBlueColor
-        
     }
 }

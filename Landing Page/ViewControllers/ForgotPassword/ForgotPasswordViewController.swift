@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 // MARK: - ForgotPasswordViewController
 
 class ForgotPasswordViewController: UIViewController {
@@ -48,6 +49,13 @@ class ForgotPasswordViewController: UIViewController {
         model.delegate = self
         
         customView.setState(model.currentState)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func tapGesture() {
+        view.endEditing(true)
     }
 
     // MARK: - Private methods
@@ -61,7 +69,6 @@ extension ForgotPasswordViewController: ForgotPasswordViewDelegate {
     func viewContinueAction(view: ForgotPasswordViewProtocol) {
         dismiss(animated: true, completion: nil)
     }
-
 }
 
 // MARK: - ForgotPasswordModelDelegate

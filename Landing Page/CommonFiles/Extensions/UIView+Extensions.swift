@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 extension UIView {
   
     func spaceToSaveArea() -> (top: CGFloat, bottom: CGFloat) {
@@ -24,7 +25,6 @@ extension UIView {
         }
         contentView.frame = self.bounds
         self.addSubview(contentView)
-//        contentView.layoutAttachAll(to: self)
         return contentView
     }
     
@@ -74,7 +74,7 @@ extension UITableViewCell {
     }
     
   /// The registration of cell for the table view
-  class func register(for tableView: UITableView) {
+    class func register(for tableView: UITableView) {
     
     let reuseId =  String(describing: self)
     let cellNib = UINib(nibName: reuseId, bundle: Bundle(for: self))
@@ -82,7 +82,7 @@ extension UITableViewCell {
   }
   
   /// Returns a reusable table view cell
-  class func deque(from tableView:UITableView) -> UITableViewCell {
+    class func deque(from tableView:UITableView) -> UITableViewCell {
     let reuseId =  String(describing:self)
     guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseId), type(of: cell) == self else {
       fatalError()

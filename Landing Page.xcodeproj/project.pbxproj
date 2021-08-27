@@ -19,11 +19,11 @@
 		633FBC9A26D66B5100DBB485 /* ForgotPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633FBC9226D66B5100DBB485 /* ForgotPasswordView.xib */; };
 		633FBC9B26D66B5100DBB485 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FBC9326D66B5100DBB485 /* ForgotPasswordView.swift */; };
 		633FBC9E26D66B5100DBB485 /* ForgotPasswordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FBC9726D66B5100DBB485 /* ForgotPasswordBuilder.swift */; };
+		634C6D4526D926D300757BA9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634C6D4426D926D300757BA9 /* Colors.swift */; };
 		634D5DCA26CFCE530037C0C6 /* TextInputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634D5DC926CFCE530037C0C6 /* TextInputFieldView.swift */; };
 		634D5DD426CFD1600037C0C6 /* TextInputFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634D5DD326CFD1600037C0C6 /* TextInputFieldView.xib */; };
 		63785D0A26CE6738002CB235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63785D0926CE6738002CB235 /* AppDelegate.swift */; };
 		63785D0C26CE6738002CB235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63785D0B26CE6738002CB235 /* SceneDelegate.swift */; };
-		63785D0E26CE6738002CB235 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63785D0D26CE6738002CB235 /* ViewController.swift */; };
 		63785D1326CE673A002CB235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63785D1226CE673A002CB235 /* Assets.xcassets */; };
 		63785D1626CE673A002CB235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63785D1426CE673A002CB235 /* LaunchScreen.storyboard */; };
 		63785D2126CE6CD2002CB235 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63785D1F26CE6CD2002CB235 /* LoginViewController.swift */; };
@@ -43,12 +43,12 @@
 		633FBC9226D66B5100DBB485 /* ForgotPasswordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordView.xib; sourceTree = "<group>"; };
 		633FBC9326D66B5100DBB485 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		633FBC9726D66B5100DBB485 /* ForgotPasswordBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordBuilder.swift; sourceTree = "<group>"; };
+		634C6D4426D926D300757BA9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		634D5DC926CFCE530037C0C6 /* TextInputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputFieldView.swift; sourceTree = "<group>"; };
 		634D5DD326CFD1600037C0C6 /* TextInputFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputFieldView.xib; sourceTree = "<group>"; };
 		63785D0626CE6738002CB235 /* Landing Page.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Landing Page.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63785D0926CE6738002CB235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63785D0B26CE6738002CB235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		63785D0D26CE6738002CB235 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		63785D1226CE673A002CB235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63785D1526CE673A002CB235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63785D1726CE673A002CB235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +116,45 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		634C6D3D26D9233B00757BA9 /* CommonFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6336A44826D3A31F00FE3B90 /* Extensions */,
+				634C6D3E26D9235B00757BA9 /* Resources */,
+				63785D0926CE6738002CB235 /* AppDelegate.swift */,
+				63785D0B26CE6738002CB235 /* SceneDelegate.swift */,
+				63785D1226CE673A002CB235 /* Assets.xcassets */,
+				63785D1426CE673A002CB235 /* LaunchScreen.storyboard */,
+			);
+			path = CommonFiles;
+			sourceTree = "<group>";
+		};
+		634C6D3E26D9235B00757BA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				634C6D4426D926D300757BA9 /* Colors.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		634C6D3F26D9238D00757BA9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				634D5DC226CFC76A0037C0C6 /* ForgotPassword */,
+				6336A43826D3A21300FE3B90 /* Template */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		634C6D4026D923BD00757BA9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63785D1E26CE6BE2002CB235 /* Login */,
+				634D5DC026CFC2400037C0C6 /* TextInputField */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		634D5DC026CFC2400037C0C6 /* TextInputField */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,16 +196,9 @@
 		63785D0826CE6738002CB235 /* Landing Page */ = {
 			isa = PBXGroup;
 			children = (
-				6336A44826D3A31F00FE3B90 /* Extensions */,
-				6336A43826D3A21300FE3B90 /* Template */,
-				634D5DC226CFC76A0037C0C6 /* ForgotPassword */,
-				634D5DC026CFC2400037C0C6 /* TextInputField */,
-				63785D1E26CE6BE2002CB235 /* Login */,
-				63785D0926CE6738002CB235 /* AppDelegate.swift */,
-				63785D0B26CE6738002CB235 /* SceneDelegate.swift */,
-				63785D0D26CE6738002CB235 /* ViewController.swift */,
-				63785D1226CE673A002CB235 /* Assets.xcassets */,
-				63785D1426CE673A002CB235 /* LaunchScreen.storyboard */,
+				634C6D4026D923BD00757BA9 /* Views */,
+				634C6D3F26D9238D00757BA9 /* ViewControllers */,
+				634C6D3D26D9233B00757BA9 /* CommonFiles */,
 				63785D1726CE673A002CB235 /* Info.plist */,
 			);
 			path = "Landing Page";
@@ -309,11 +341,11 @@
 				6336A44226D3A2EC00FE3B90 /* TestViewController.swift in Sources */,
 				63785D2126CE6CD2002CB235 /* LoginViewController.swift in Sources */,
 				634D5DCA26CFCE530037C0C6 /* TextInputFieldView.swift in Sources */,
+				634C6D4526D926D300757BA9 /* Colors.swift in Sources */,
 				633FBC9826D66B5100DBB485 /* ForgotPasswordModel.swift in Sources */,
 				6336A44426D3A2EC00FE3B90 /* TestModel.swift in Sources */,
 				6336A44326D3A2EC00FE3B90 /* TestBuilder.swift in Sources */,
 				6336A44626D3A2EC00FE3B90 /* TestView.swift in Sources */,
-				63785D0E26CE6738002CB235 /* ViewController.swift in Sources */,
 				633FBC9B26D66B5100DBB485 /* ForgotPasswordView.swift in Sources */,
 				633FBC9926D66B5100DBB485 /* ForgotPasswordViewController.swift in Sources */,
 				633FBC9E26D66B5100DBB485 /* ForgotPasswordBuilder.swift in Sources */,

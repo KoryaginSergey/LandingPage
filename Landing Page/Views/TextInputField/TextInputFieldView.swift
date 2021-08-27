@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class TextInputFieldView: UIView {
 
     @IBOutlet private weak var nameFieldLabel: UILabel!
@@ -17,16 +18,11 @@ class TextInputFieldView: UIView {
     
     var eyeIsEnable = true
     
-    
-    let myBlueColor = UIColor.init(red: 68/255, green: 20/255, blue: 214/255, alpha: 1.0)
-    
     public struct State {
         let title: String
         let leftImage: UIImage
         var rightImage: UIImage?
         let textPlaceholder: String
-        
-        
         
         init(title: String,
              leftImage: UIImage,
@@ -44,7 +40,6 @@ class TextInputFieldView: UIView {
         setupUI()
         fieldForInputTextField.delegate = self
     }
-    
     
     @IBAction func selectEyeAction(_ sender: Any) {
         guard (snapshot?.rightImage) != nil else {return}
@@ -65,14 +60,12 @@ class TextInputFieldView: UIView {
     }
 }
 
+
 extension TextInputFieldView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
     }
-  
-    
 }
-
 
 private extension TextInputFieldView {
     
@@ -83,8 +76,6 @@ private extension TextInputFieldView {
         nameFieldLabel.textColor = myBlueColor
         borderLabel.layer.borderWidth = 1
         borderLabel.layer.borderColor = UIColor.placeholderText.cgColor
-//        nameFieldLabel.adjustsFontSizeToFitWidth = true
-//        nameFieldLabel.minimumScaleFactor = 0.1
     }
     
     func updateUI() {
@@ -93,6 +84,5 @@ private extension TextInputFieldView {
         fieldForEyeImageView.image = snapshot?.rightImage
         fieldForInputTextField.placeholder = snapshot?.textPlaceholder
     }
-    
 }
 

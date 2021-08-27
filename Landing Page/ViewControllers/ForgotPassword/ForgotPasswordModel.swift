@@ -25,7 +25,7 @@ protocol ForgotPasswordModelProtocol: class {
 // MARK: - ForgotPasswordModel
 
 class ForgotPasswordModel: ForgotPasswordModelProtocol {
-    let currentState: TextInputFieldView.State = .init(title: "email".uppercased(), leftImage: (UIImage(named: "lock")?.withTintColor(UIColor.init(red: 68/255, green: 20/255, blue: 214/255, alpha: 1.0), renderingMode: .alwaysOriginal))!, textPlaceholder: "enter your email")
+    let currentState: TextInputFieldView.State = .init(title: "email".uppercased(), leftImage: (UIImage(named: "mail")?.withTintColor(UIColor.init(red: 68/255, green: 20/255, blue: 214/255, alpha: 1.0), renderingMode: .alwaysOriginal))!, textPlaceholder: "enter your email")
 
     // MARK: - ForgotPasswordModel methods
 

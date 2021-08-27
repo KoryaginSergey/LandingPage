@@ -10,65 +10,61 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var mainTitleLabel: UILabel!
-    @IBOutlet weak var mainTitleIconImageView: UIImageView!
-    @IBOutlet weak var secondTitleLabel: UILabel!
-    @IBOutlet weak var thirdTitleLabel: UILabel!
+    @IBOutlet private weak var mainTitleLabel: UILabel!
+    @IBOutlet private weak var mainTitleIconImageView: UIImageView!
+    @IBOutlet private weak var secondTitleLabel: UILabel!
+    @IBOutlet private weak var thirdTitleLabel: UILabel!
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet private weak var scrollView: UIScrollView!
     
-    @IBOutlet weak var viewForInputTextView: UIView!
-    @IBOutlet weak var viewForInputUsernameView: UIView!
-    @IBOutlet weak var viewForInputPasswordView: UIView!
+    @IBOutlet private weak var viewForInputTextView: UIView!
+    @IBOutlet private weak var viewForInputUsernameView: UIView!
+    @IBOutlet private weak var viewForInputPasswordView: UIView!
     
+    @IBOutlet private weak var passwordRecoveryButton: UIButton!
+    @IBOutlet private weak var signInButton: UIButton!
+    @IBOutlet private weak var scanQRCodeButton: UIButton!
     
-    @IBOutlet weak var passwordRecoveryButton: UIButton!
-    @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var scanQRCodeButton: UIButton!
+    @IBOutlet private weak var fieldForImageView: UIImageView!
     
-    @IBOutlet weak var fieldForImageView: UIImageView!
-    
-    let myBlueColor = UIColor.init(red: 68/255, green: 20/255, blue: 214/255, alpha: 1.0)
-    
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setValuesLoginViewController()
         
-        
-        
-        let inputUsernameView: TextInputFieldView = TextInputFieldView.create()
+          let inputUsernameView: TextInputFieldView = TextInputFieldView.create()
         inputUsernameView.snapshot = .init(title: "username".uppercased(), leftImage: (UIImage(named: "user")?.withTintColor(myBlueColor, renderingMode: .alwaysOriginal))!, textPlaceholder: "your username")
         viewForInputUsernameView.addSubview(inputUsernameView)
         inputUsernameView.translatesAutoresizingMaskIntoConstraints = false
         inputUsernameView.layoutAttachAll(to: viewForInputUsernameView)
         
         let inputPasswordView: TextInputFieldView = TextInputFieldView.create()
-        inputPasswordView.snapshot = .init(title: "Password".uppercased(), leftImage: (UIImage(named: "lock")?.withTintColor(myBlueColor, renderingMode: .alwaysOriginal))!, rightImage:(UIImage(named: "eye")?.withTintColor(.systemGray2, renderingMode: .alwaysOriginal))!, textPlaceholder: "your password")
+        inputPasswordView.snapshot = .init(title: "password".uppercased(), leftImage: (UIImage(named: "lock")?.withTintColor(myBlueColor, renderingMode: .alwaysOriginal))!, rightImage:(UIImage(named: "eye")?.withTintColor(.systemGray2, renderingMode: .alwaysOriginal))!, textPlaceholder: "your password")
         viewForInputPasswordView.addSubview(inputPasswordView)
         inputPasswordView.translatesAutoresizingMaskIntoConstraints = false
         inputPasswordView.layoutAttachAll(to: viewForInputPasswordView)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
+        view.addGestureRecognizer(tapGesture)
     }
     
-    
+    @objc func tapGesture() {
+        view.endEditing(true)
+    }
+       
     @IBAction func passwordRecoveryButton(_ sender: Any) {
         let myVC = ForgotPasswordBuilder.viewController()
         present(myVC, animated: true, completion: nil)
     }
     
-
     @IBAction func signInButton(_ sender: Any) {
         let testVc = TestBuilder.viewController(color: UIColor.green)
         present(testVc, animated: true, completion: nil)
     }
     
-  
-    @IBAction func scanQRCodeButton(_ sender: Any) {
+      @IBAction func scanQRCodeButton(_ sender: Any) {
     }
-    
-    
 }
 
 
@@ -93,8 +89,5 @@ private extension LoginViewController {
         scanQRCodeButton.tintColor = myBlueColor
         
         fieldForImageView.image = UIImage(named: "back2")
-        
-    }
-    
-    
+   }
 }
