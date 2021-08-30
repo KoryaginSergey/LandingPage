@@ -14,6 +14,7 @@
 		6336A44526D3A2EC00FE3B90 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6336A44026D3A2EC00FE3B90 /* TestView.xib */; };
 		6336A44626D3A2EC00FE3B90 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6336A44126D3A2EC00FE3B90 /* TestView.swift */; };
 		6336A44D26D3A45100FE3B90 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6336A44C26D3A45100FE3B90 /* UIView+Extensions.swift */; };
+		633ACE1926DD12DE003BBE46 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633ACE1826DD12DE003BBE46 /* UserDefaults+Extensions.swift */; };
 		633FBC9826D66B5100DBB485 /* ForgotPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FBC8F26D66B5100DBB485 /* ForgotPasswordModel.swift */; };
 		633FBC9926D66B5100DBB485 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FBC9026D66B5100DBB485 /* ForgotPasswordViewController.swift */; };
 		633FBC9A26D66B5100DBB485 /* ForgotPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633FBC9226D66B5100DBB485 /* ForgotPasswordView.xib */; };
@@ -38,6 +39,7 @@
 		6336A44026D3A2EC00FE3B90 /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		6336A44126D3A2EC00FE3B90 /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		6336A44C26D3A45100FE3B90 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		633ACE1826DD12DE003BBE46 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		633FBC8F26D66B5100DBB485 /* ForgotPasswordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordModel.swift; sourceTree = "<group>"; };
 		633FBC9026D66B5100DBB485 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		633FBC9226D66B5100DBB485 /* ForgotPasswordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordView.xib; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				6336A44C26D3A45100FE3B90 /* UIView+Extensions.swift */,
+				633ACE1826DD12DE003BBE46 /* UserDefaults+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				633FBC9E26D66B5100DBB485 /* ForgotPasswordBuilder.swift in Sources */,
 				63785D0A26CE6738002CB235 /* AppDelegate.swift in Sources */,
 				63785D0C26CE6738002CB235 /* SceneDelegate.swift in Sources */,
+				633ACE1926DD12DE003BBE46 /* UserDefaults+Extensions.swift in Sources */,
 				6336A44D26D3A45100FE3B90 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

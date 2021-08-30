@@ -26,18 +26,19 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var scanQRCodeButton: UIButton!
     
     @IBOutlet private weak var fieldForImageView: UIImageView!
-    
+    private var emailTextView: TextInputFieldView?
         
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setValuesLoginViewController()
         
-          let inputUsernameView: TextInputFieldView = TextInputFieldView.create()
+        let inputUsernameView: TextInputFieldView = TextInputFieldView.create()
         inputUsernameView.snapshot = .init(title: "username".uppercased(), leftImage: (UIImage(named: "user")?.withTintColor(myBlueColor, renderingMode: .alwaysOriginal))!, textPlaceholder: "your username")
         viewForInputUsernameView.addSubview(inputUsernameView)
         inputUsernameView.translatesAutoresizingMaskIntoConstraints = false
         inputUsernameView.layoutAttachAll(to: viewForInputUsernameView)
+        emailTextView = inputUsernameView
         
         let inputPasswordView: TextInputFieldView = TextInputFieldView.create()
         inputPasswordView.snapshot = .init(title: "password".uppercased(), leftImage: (UIImage(named: "lock")?.withTintColor(myBlueColor, renderingMode: .alwaysOriginal))!, rightImage:(UIImage(named: "eye")?.withTintColor(.systemGray2, renderingMode: .alwaysOriginal))!, textPlaceholder: "your password")
@@ -59,11 +60,17 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInButton(_ sender: Any) {
-        let testVc = TestBuilder.viewController(color: UIColor.green)
-        present(testVc, animated: true, completion: nil)
+        let myVC = ForgotPasswordBuilder.viewController()
+        present(myVC, animated: true, completion: nil)
+        
+//        UserDefaults.standard.setValue(emailTextView?.getText(), forKey: "UserEmailAddressKey")
+        UserDefaults.standard.set(emailTextView?.getText(), forKey: "UserEmailAddressKey")
+        
     }
     
       @IBAction func scanQRCodeButton(_ sender: Any) {
+        let myVC = ForgotPasswordBuilder.viewController()
+        present(myVC, animated: true, completion: nil)
     }
 }
 

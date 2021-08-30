@@ -53,10 +53,14 @@ class TextInputFieldView: UIView {
         }
     }
     
-       public var snapshot: State? {
+    public var snapshot: State? {
         didSet {
             updateUI()
         }
+    }
+    
+    public func getText() -> String? {
+        return self.fieldForInputTextField.text
     }
 }
 
