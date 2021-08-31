@@ -51,17 +51,10 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBu-Uz-mxO">
-                    <rect key="frame" x="325" y="45" width="40" height="35"/>
-                    <connections>
-                        <action selector="selectEyeAction:" destination="ehs-j4-Ugo" eventType="touchUpInside" id="uY4-P4-sJE"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="y8d-Nv-BXy"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="y8d-Nv-BXy" firstAttribute="bottom" secondItem="vBu-Uz-mxO" secondAttribute="bottom" constant="10" id="0Lv-eC-nVb"/>
                 <constraint firstItem="sLu-JJ-Lca" firstAttribute="top" secondItem="ehs-j4-Ugo" secondAttribute="top" priority="750" constant="10" id="6lO-W8-8u5"/>
                 <constraint firstItem="ZE8-hd-LUY" firstAttribute="leading" secondItem="1oR-cJ-U1y" secondAttribute="trailing" constant="20" id="85f-NL-fTb"/>
                 <constraint firstItem="y8d-Nv-BXy" firstAttribute="trailing" secondItem="sLu-JJ-Lca" secondAttribute="trailing" constant="10" id="9bS-ti-swV"/>
@@ -72,13 +65,10 @@
                 <constraint firstItem="y8d-Nv-BXy" firstAttribute="trailing" secondItem="8YI-9X-1g7" secondAttribute="trailing" constant="20" id="NV8-cr-vzk"/>
                 <constraint firstItem="1oR-cJ-U1y" firstAttribute="leading" secondItem="y8d-Nv-BXy" secondAttribute="leading" constant="10" id="OKo-xf-BVO"/>
                 <constraint firstItem="1oR-cJ-U1y" firstAttribute="top" secondItem="sLu-JJ-Lca" secondAttribute="bottom" constant="15" id="UFi-5d-wfl"/>
-                <constraint firstItem="vBu-Uz-mxO" firstAttribute="top" secondItem="sLu-JJ-Lca" secondAttribute="bottom" constant="5" id="WdA-fn-KRw"/>
                 <constraint firstItem="YSz-7v-Mtb" firstAttribute="leading" secondItem="y8d-Nv-BXy" secondAttribute="leading" constant="10" id="Zfh-bk-yP5"/>
-                <constraint firstItem="vBu-Uz-mxO" firstAttribute="leading" secondItem="ZE8-hd-LUY" secondAttribute="trailing" constant="10" id="gXO-8M-Wpl"/>
                 <constraint firstItem="sLu-JJ-Lca" firstAttribute="leading" secondItem="y8d-Nv-BXy" secondAttribute="leading" constant="10" id="h4Y-gz-wJq"/>
                 <constraint firstItem="ZE8-hd-LUY" firstAttribute="bottom" secondItem="y8d-Nv-BXy" secondAttribute="bottom" constant="-5" id="kEe-ZI-rdG"/>
                 <constraint firstItem="8YI-9X-1g7" firstAttribute="bottom" secondItem="y8d-Nv-BXy" secondAttribute="bottom" constant="-15" id="vrt-iU-T1t"/>
-                <constraint firstItem="y8d-Nv-BXy" firstAttribute="trailing" secondItem="vBu-Uz-mxO" secondAttribute="trailing" constant="10" id="wuG-9Z-CDm"/>
                 <constraint firstItem="y8d-Nv-BXy" firstAttribute="trailing" secondItem="YSz-7v-Mtb" secondAttribute="trailing" constant="10" id="zAA-zL-nyw"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -89,7 +79,7 @@
                 <outlet property="iconImageView" destination="1oR-cJ-U1y" id="Jt1-Gd-Kwr"/>
                 <outlet property="nameFieldLabel" destination="sLu-JJ-Lca" id="c09-PU-iWp"/>
             </connections>
-            <point key="canvasLocation" x="146" y="-36"/>
+            <point key="canvasLocation" x="43" y="-29"/>
         </view>
     </objects>
     <resources>

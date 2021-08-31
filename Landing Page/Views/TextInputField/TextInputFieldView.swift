@@ -16,7 +16,11 @@ class TextInputFieldView: UIView {
     @IBOutlet private weak var fieldForEyeImageView: UIImageView!
     @IBOutlet private weak var borderLabel: UILabel!
     
-    var eyeIsEnable = true
+    var eyeIsEnable = true {
+        didSet{
+            self.fieldForInputTextField.isSecureTextEntry = !eyeIsEnable
+        }
+    }
     
     public struct State {
         let title: String
@@ -41,18 +45,6 @@ class TextInputFieldView: UIView {
         fieldForInputTextField.delegate = self
     }
     
-    @IBAction func selectEyeAction(_ sender: Any) {
-        guard (snapshot?.rightImage) != nil else {return}
-        if eyeIsEnable {
-        snapshot?.rightImage = UIImage(named: "eye-slash")?.withTintColor(.systemGray2, renderingMode: .alwaysOriginal)
-        eyeIsEnable = false
-        print("Hello World")
-        } else {
-            snapshot?.rightImage = UIImage(named: "eye")?.withTintColor(.systemGray2, renderingMode: .alwaysOriginal)
-            eyeIsEnable = true
-        }
-    }
-    
     public var snapshot: State? {
         didSet {
             updateUI()
@@ -66,6 +58,7 @@ class TextInputFieldView: UIView {
 
 
 extension TextInputFieldView: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
     }
@@ -80,6 +73,8 @@ private extension TextInputFieldView {
         nameFieldLabel.textColor = myBlueColor
         borderLabel.layer.borderWidth = 1
         borderLabel.layer.borderColor = UIColor.placeholderText.cgColor
+        
+        fieldForEyeImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(eyeSelector)))
     }
     
     func updateUI() {
@@ -87,6 +82,14 @@ private extension TextInputFieldView {
         iconImageView.image = snapshot?.leftImage
         fieldForEyeImageView.image = snapshot?.rightImage
         fieldForInputTextField.placeholder = snapshot?.textPlaceholder
+        fieldForEyeImageView.isUserInteractionEnabled = snapshot?.rightImage != nil
+    }
+    
+    @objc
+    func  eyeSelector() {
+        let imageName = eyeIsEnable ? "eye-slash" : "eye"
+        snapshot?.rightImage = UIImage(named: imageName)?.withTintColor(.systemGray2, renderingMode: .alwaysOriginal)
+        eyeIsEnable.toggle()
     }
 }
 

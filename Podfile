@@ -7,5 +7,6 @@ target 'Landing Page' do
 
   # Pods for Landing Page
     pod 'TPKeyboardAvoidingSwift'
+    pod 'UIWindowTransitions'
 
 end

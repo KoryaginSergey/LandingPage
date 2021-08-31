@@ -26,7 +26,10 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var scanQRCodeButton: UIButton!
     
     @IBOutlet private weak var fieldForImageView: UIImageView!
+    
     private var emailTextView: TextInputFieldView?
+    private var passwordTextView: TextInputFieldView?
+    
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +48,7 @@ class LoginViewController: UIViewController {
         viewForInputPasswordView.addSubview(inputPasswordView)
         inputPasswordView.translatesAutoresizingMaskIntoConstraints = false
         inputPasswordView.layoutAttachAll(to: viewForInputPasswordView)
+        passwordTextView = inputPasswordView
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
         view.addGestureRecognizer(tapGesture)
@@ -60,17 +64,26 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInButton(_ sender: Any) {
-        let myVC = ForgotPasswordBuilder.viewController()
-        present(myVC, animated: true, completion: nil)
         
-//        UserDefaults.standard.setValue(emailTextView?.getText(), forKey: "UserEmailAddressKey")
-        UserDefaults.standard.set(emailTextView?.getText(), forKey: "UserEmailAddressKey")
+        if emailTextView!.getText()!.isEmpty {
+            showAlert(message: "Invalid email")
+            return
+        }
+        if passwordTextView!.getText()!.isEmpty {
+            showAlert(message: "Invalid password")
+            return
+        }
         
+        UserDefaults.userEmail = emailTextView?.getText()
+        UserDefaults.userPassword = passwordTextView?.getText()
+    
+//        guard let userEmail = UserDefaults.userEmail, !userEmail.trimmingCharacters(in: .whitespaces).isEmpty else {return}
+        NotificationCenter.default.post(name: .userDidSighIn, object: nil)
     }
     
       @IBAction func scanQRCodeButton(_ sender: Any) {
-        let myVC = ForgotPasswordBuilder.viewController()
-        present(myVC, animated: true, completion: nil)
+//        let myVC = ForgotPasswordBuilder.viewController()
+//        present(myVC, animated: true, completion: nil)
     }
 }
 
@@ -84,10 +97,7 @@ private extension LoginViewController {
         secondTitleLabel.text = "Let's get started."
         secondTitleLabel.textColor = myBlueColor
         secondTitleLabel.font = UIFont.systemFont(ofSize: 28, weight: .heavy)
-        thirdTitleLabel.text = """
-        Make the school app
-        your personal assistant
-        """
+        thirdTitleLabel.text = "Make the school app \nyour personal assistant"
         thirdTitleLabel.font = UIFont.systemFont(ofSize: 17, weight: .thin)
         
         passwordRecoveryButton.tintColor = myBlueColor
@@ -97,4 +107,14 @@ private extension LoginViewController {
         
         fieldForImageView.image = UIImage(named: "back2")
    }
+    
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Attention", message: message,
+                                      preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default,
+                                          handler: {(_: UIAlertAction!) in
+                                            
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
 }
