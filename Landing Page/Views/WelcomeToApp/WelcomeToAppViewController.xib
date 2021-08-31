@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeToAppViewController" customModule="Landing_Page" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VVZ-Dy-MKa">
+                    <rect key="frame" x="0.0" y="786" width="414" height="110"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="110" id="RYK-GD-Cze"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGo-yv-BI9">
+                    <rect key="frame" x="20" y="94" width="374" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="XOl-dM-ifO"/>
+                    </constraints>
+                    <string key="text">Welcome
+to
+Appella</string>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAV-BE-1n1">
+                    <rect key="frame" x="20" y="284" width="374" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="bq4-QT-ltQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1T-1q-vfQ">
+                    <rect key="frame" x="20" y="329" width="374" height="25"/>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="UIv-Mb-CAt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZs-q8-XMU">
+                    <rect key="frame" x="20" y="414" width="374" height="55"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="5m3-rn-pH9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <state key="normal" title="Delete email from UserDefaults">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="VVZ-Dy-MKa" firstAttribute="top" secondItem="WZs-q8-XMU" secondAttribute="bottom" priority="750" constant="33" id="4p5-EA-HIC"/>
+                <constraint firstItem="t1T-1q-vfQ" firstAttribute="top" secondItem="lAV-BE-1n1" secondAttribute="bottom" constant="20" id="A65-zA-yvs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GGo-yv-BI9" secondAttribute="trailing" constant="20" id="B9b-6g-1NA"/>
+                <constraint firstAttribute="trailing" secondItem="VVZ-Dy-MKa" secondAttribute="trailing" id="Fa7-Tt-kgW"/>
+                <constraint firstItem="WZs-q8-XMU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Gkj-Pn-RTp"/>
+                <constraint firstAttribute="bottom" secondItem="VVZ-Dy-MKa" secondAttribute="bottom" id="N6Y-LJ-q8w"/>
+                <constraint firstItem="WZs-q8-XMU" firstAttribute="top" secondItem="t1T-1q-vfQ" secondAttribute="bottom" constant="60" id="ZaE-WV-fVV"/>
+                <constraint firstItem="VVZ-Dy-MKa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WZs-q8-XMU" secondAttribute="bottom" constant="33" id="cpb-gi-kWc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="t1T-1q-vfQ" secondAttribute="trailing" constant="20" id="dAU-Lw-Z1u"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WZs-q8-XMU" secondAttribute="trailing" constant="20" id="dfV-gE-Dh6"/>
+                <constraint firstItem="GGo-yv-BI9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="eLx-5f-Xu9"/>
+                <constraint firstItem="VVZ-Dy-MKa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hQc-h1-hd6"/>
+                <constraint firstItem="lAV-BE-1n1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="jbo-0G-7i9"/>
+                <constraint firstItem="t1T-1q-vfQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="khu-t5-aNo"/>
+                <constraint firstItem="GGo-yv-BI9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="vug-1j-N9P"/>
+                <constraint firstItem="lAV-BE-1n1" firstAttribute="top" secondItem="GGo-yv-BI9" secondAttribute="bottom" constant="40" id="x4I-pw-xBH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lAV-BE-1n1" secondAttribute="trailing" constant="20" id="xbs-5H-2Vx"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="82"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
