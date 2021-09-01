@@ -9,6 +9,6 @@ import Foundation
 
 
 extension Notification.Name {
-    static let userDidSighIn = Notification.Name.init("UserDidSignIn")
-    static let userDidSighOut = Notification.Name.init("UserDidSignOut")
+  static let userDidSighIn = Notification.Name.init("UserDidSignIn")
+  static let userDidSighOut = Notification.Name.init("UserDidSignOut")
 }

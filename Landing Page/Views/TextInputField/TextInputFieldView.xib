@@ -79,7 +79,7 @@
                 <outlet property="iconImageView" destination="1oR-cJ-U1y" id="Jt1-Gd-Kwr"/>
                 <outlet property="nameFieldLabel" destination="sLu-JJ-Lca" id="c09-PU-iWp"/>
             </connections>
-            <point key="canvasLocation" x="43" y="-29"/>
+            <point key="canvasLocation" x="-359" y="-134"/>
         </view>
     </objects>
     <resources>

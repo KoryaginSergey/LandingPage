@@ -9,4 +9,4 @@ import Foundation
 import UIKit
 
 
- let myBlueColor = UIColor.init(red: 68/255, green: 20/255, blue: 214/255, alpha: 1.0)
+let myBlueColor = UIColor.init(red: 68/255, green: 20/255, blue: 214/255, alpha: 1.0)
