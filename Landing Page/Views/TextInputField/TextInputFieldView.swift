@@ -49,14 +49,10 @@ class TextInputFieldView: UIView {
       updateUI()
     }
   }
-  //  public var text: String {
-  //    fieldForInputTextField.text ?? ""§
-  //  }
-  
-  public func getText() -> String? {
-    return self.fieldForInputTextField.text
-  }
-}
+    public var text: String? {
+      return fieldForInputTextField.text
+    }
+ }
 
 
 extension TextInputFieldView: UITextFieldDelegate {

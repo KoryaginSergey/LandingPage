@@ -36,6 +36,7 @@
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZE8-hd-LUY">
                     <rect key="frame" x="50" y="45" width="265" height="40"/>
+                    <color key="tintColor" systemColor="labelColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="qdF-du-Dur"/>
                     </constraints>
@@ -79,10 +80,13 @@
                 <outlet property="iconImageView" destination="1oR-cJ-U1y" id="Jt1-Gd-Kwr"/>
                 <outlet property="nameFieldLabel" destination="sLu-JJ-Lca" id="c09-PU-iWp"/>
             </connections>
-            <point key="canvasLocation" x="-359" y="-134"/>
+            <point key="canvasLocation" x="-289" y="-131"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -58,16 +58,17 @@ class LoginViewController: UIViewController {
   }
   
   @IBAction func signInButton(_ sender: Any) {
-    if emailTextView!.getText()!.isEmpty {
+    guard let emailText = emailTextView?.text, !emailText.isEmpty  else {
       showAlert(message: "Invalid email")
       return
     }
-    if passwordTextView!.getText()!.isEmpty {
-      showAlert(message: "Invalid password")
-      return
-    }
-    UserDefaults.userEmail = emailTextView?.getText()
-    UserDefaults.userPassword = passwordTextView?.getText()
+    
+//    if passwordTextView!.getText()!.isEmpty {
+//      showAlert(message: "Invalid password")
+//      return
+//    }
+    UserDefaults.userEmail = emailText
+//    UserDefaults.userPassword = passwordTextView?.getText()
     NotificationCenter.default.post(name: .userDidSighIn, object: nil)
   }
   
