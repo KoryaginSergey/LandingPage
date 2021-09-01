@@ -161,6 +161,8 @@
 		634C6D3F26D9238D00757BA9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				63785D1E26CE6BE2002CB235 /* Login */,
+				843D4AF326DD6B98006ECDBA /* WelcomeToApp */,
 				634D5DC226CFC76A0037C0C6 /* ForgotPassword */,
 				6336A43826D3A21300FE3B90 /* Template */,
 			);
@@ -170,8 +172,6 @@
 		634C6D4026D923BD00757BA9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				843D4AF326DD6B98006ECDBA /* WelcomeToApp */,
-				63785D1E26CE6BE2002CB235 /* Login */,
 				634D5DC026CFC2400037C0C6 /* TextInputField */,
 			);
 			path = Views;

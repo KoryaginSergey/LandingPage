@@ -25,7 +25,6 @@ class MainCoordinator {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-    
 }
 
 private extension MainCoordinator {

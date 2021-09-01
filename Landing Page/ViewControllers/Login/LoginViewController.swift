@@ -77,7 +77,6 @@ class LoginViewController: UIViewController {
         UserDefaults.userEmail = emailTextView?.getText()
         UserDefaults.userPassword = passwordTextView?.getText()
     
-//        guard let userEmail = UserDefaults.userEmail, !userEmail.trimmingCharacters(in: .whitespaces).isEmpty else {return}
         NotificationCenter.default.post(name: .userDidSighIn, object: nil)
     }
     
