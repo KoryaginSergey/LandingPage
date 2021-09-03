@@ -14,7 +14,7 @@
                 <outlet property="mainTitleIconImageView" destination="tQq-ha-JsN" id="r9s-Qg-D6T"/>
                 <outlet property="mainTitleLabel" destination="5Cf-jq-YuF" id="erN-m8-oa9"/>
                 <outlet property="passwordRecoveryButton" destination="cOs-KR-hhV" id="plH-JL-Ee9"/>
-                <outlet property="scanQRCodeButton" destination="3mm-m3-wh8" id="qqn-pm-ZWL"/>
+                <outlet property="scanQRCodeLabel" destination="31W-af-WXv" id="Ptd-5K-Mcd"/>
                 <outlet property="scrollView" destination="8eN-Mm-gkW" id="yy7-Tf-zkr"/>
                 <outlet property="secondTitleLabel" destination="8jj-hZ-Lpq" id="eh8-mi-b5v"/>
                 <outlet property="signInButton" destination="awM-8q-DTx" id="osV-OO-HMn"/>
@@ -135,55 +135,54 @@
                                         <action selector="signInButton:" destination="-1" eventType="touchUpInside" id="SNC-MD-d2x"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mm-m3-wh8">
-                                    <rect key="frame" x="100" y="602" width="190" height="30"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="30" id="x6r-H2-rB4"/>
-                                    </constraints>
-                                    <state key="normal" title="or scan QR code"/>
-                                    <connections>
-                                        <action selector="scanQRCodeButton:" destination="-1" eventType="touchUpInside" id="JPL-bf-SKS"/>
-                                    </connections>
-                                </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back2" translatesAutoresizingMaskIntoConstraints="NO" id="s7U-ot-Pax">
                                     <rect key="frame" x="0.0" y="694" width="390" height="110"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="110" id="0Ob-32-lCA"/>
                                     </constraints>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or scan QR code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31W-af-WXv">
+                                    <rect key="frame" x="132" y="602" width="126.33333333333331" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="1n3-1U-Vzy"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
+                                <constraint firstItem="s7U-ot-Pax" firstAttribute="top" secondItem="31W-af-WXv" secondAttribute="bottom" priority="749" constant="81" id="0a7-D3-eiO"/>
+                                <constraint firstItem="31W-af-WXv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="a0P-4T-ePR" secondAttribute="leading" constant="20" id="1t1-ko-BfB"/>
                                 <constraint firstItem="z1X-If-UPc" firstAttribute="leading" secondItem="a0P-4T-ePR" secondAttribute="leading" constant="40" id="6qf-Nh-4gf"/>
+                                <constraint firstItem="31W-af-WXv" firstAttribute="centerX" secondItem="a0P-4T-ePR" secondAttribute="centerX" id="9Kv-xl-78k"/>
                                 <constraint firstItem="awM-8q-DTx" firstAttribute="top" secondItem="cOs-KR-hhV" secondAttribute="bottom" constant="35" id="ACw-6l-kR5"/>
                                 <constraint firstItem="z1X-If-UPc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8jj-hZ-Lpq" secondAttribute="bottom" constant="10" id="BZU-qt-Koc"/>
                                 <constraint firstItem="btZ-s2-wty" firstAttribute="top" relation="greaterThanOrEqual" secondItem="a0P-4T-ePR" secondAttribute="top" constant="10" id="Bj2-3m-tFP"/>
-                                <constraint firstItem="s7U-ot-Pax" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3mm-m3-wh8" secondAttribute="bottom" constant="20" id="Cau-8R-cEB"/>
                                 <constraint firstAttribute="trailing" secondItem="s7U-ot-Pax" secondAttribute="trailing" id="Dei-C2-xia"/>
-                                <constraint firstItem="3mm-m3-wh8" firstAttribute="leading" secondItem="a0P-4T-ePR" secondAttribute="leading" constant="100" id="HFq-Ra-vTF"/>
                                 <constraint firstItem="z1X-If-UPc" firstAttribute="centerX" secondItem="a0P-4T-ePR" secondAttribute="centerX" id="HHg-YA-iyM"/>
                                 <constraint firstItem="btZ-s2-wty" firstAttribute="centerX" secondItem="a0P-4T-ePR" secondAttribute="centerX" id="Hzz-L6-mWe"/>
+                                <constraint firstItem="s7U-ot-Pax" firstAttribute="top" relation="greaterThanOrEqual" secondItem="31W-af-WXv" secondAttribute="bottom" constant="20" id="JX0-Lc-HK7"/>
                                 <constraint firstItem="Ovq-Vk-lXZ" firstAttribute="top" secondItem="z1X-If-UPc" secondAttribute="bottom" priority="750" constant="30" id="Mfu-n5-VtD"/>
-                                <constraint firstItem="s7U-ot-Pax" firstAttribute="top" secondItem="3mm-m3-wh8" secondAttribute="bottom" priority="749" constant="81" id="PaH-gs-Dom"/>
                                 <constraint firstItem="z1X-If-UPc" firstAttribute="top" secondItem="8jj-hZ-Lpq" secondAttribute="bottom" priority="750" constant="25" id="Q38-KI-vyK"/>
                                 <constraint firstItem="8jj-hZ-Lpq" firstAttribute="top" secondItem="btZ-s2-wty" secondAttribute="bottom" priority="750" constant="30" id="RzG-lR-wgO"/>
                                 <constraint firstAttribute="trailing" secondItem="awM-8q-DTx" secondAttribute="trailing" constant="20" id="SFC-Cw-gwf"/>
                                 <constraint firstItem="8jj-hZ-Lpq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="btZ-s2-wty" secondAttribute="bottom" constant="10" id="UlL-Ft-5t7"/>
+                                <constraint firstItem="31W-af-WXv" firstAttribute="top" secondItem="awM-8q-DTx" secondAttribute="bottom" constant="25" id="WKU-uD-mPW"/>
                                 <constraint firstAttribute="trailing" secondItem="8jj-hZ-Lpq" secondAttribute="trailing" constant="20" id="Wf3-Zz-tap"/>
                                 <constraint firstItem="8jj-hZ-Lpq" firstAttribute="centerX" secondItem="a0P-4T-ePR" secondAttribute="centerX" id="YbH-Gz-EAL"/>
                                 <constraint firstItem="cOs-KR-hhV" firstAttribute="top" secondItem="Ovq-Vk-lXZ" secondAttribute="bottom" constant="15" id="bsy-Re-GVJ"/>
                                 <constraint firstAttribute="trailing" secondItem="Ovq-Vk-lXZ" secondAttribute="trailing" constant="10" id="cdJ-Ib-pj3"/>
                                 <constraint firstItem="Ovq-Vk-lXZ" firstAttribute="leading" secondItem="a0P-4T-ePR" secondAttribute="leading" constant="10" id="ddG-BW-Lel"/>
                                 <constraint firstItem="awM-8q-DTx" firstAttribute="centerX" secondItem="a0P-4T-ePR" secondAttribute="centerX" id="e5a-sh-PVD"/>
-                                <constraint firstItem="3mm-m3-wh8" firstAttribute="centerX" secondItem="a0P-4T-ePR" secondAttribute="centerX" id="f6o-T5-CkZ"/>
-                                <constraint firstAttribute="trailing" secondItem="3mm-m3-wh8" secondAttribute="trailing" constant="100" id="fu4-UE-bLb"/>
                                 <constraint firstItem="awM-8q-DTx" firstAttribute="leading" secondItem="a0P-4T-ePR" secondAttribute="leading" constant="20" id="gTF-Kb-C4i"/>
                                 <constraint firstAttribute="bottom" secondItem="s7U-ot-Pax" secondAttribute="bottom" id="jun-fN-uLk"/>
                                 <constraint firstAttribute="trailing" secondItem="btZ-s2-wty" secondAttribute="trailing" constant="100" id="m0h-cA-UyI"/>
                                 <constraint firstAttribute="trailing" secondItem="z1X-If-UPc" secondAttribute="trailing" constant="40" id="nti-qH-k98"/>
                                 <constraint firstAttribute="trailing" secondItem="cOs-KR-hhV" secondAttribute="trailing" constant="20" id="qvB-yf-0Xp"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="31W-af-WXv" secondAttribute="trailing" constant="20" id="xhw-xP-Cac"/>
                                 <constraint firstItem="s7U-ot-Pax" firstAttribute="leading" secondItem="a0P-4T-ePR" secondAttribute="leading" id="y77-i7-8MR"/>
-                                <constraint firstItem="3mm-m3-wh8" firstAttribute="top" secondItem="awM-8q-DTx" secondAttribute="bottom" constant="25" id="yuh-Db-TL1"/>
                                 <constraint firstItem="Ovq-Vk-lXZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="z1X-If-UPc" secondAttribute="bottom" constant="10" id="z0E-Aw-jAD"/>
                                 <constraint firstItem="btZ-s2-wty" firstAttribute="top" secondItem="a0P-4T-ePR" secondAttribute="top" priority="750" constant="50" id="zGQ-ob-Xj5"/>
                                 <constraint firstItem="8jj-hZ-Lpq" firstAttribute="leading" secondItem="a0P-4T-ePR" secondAttribute="leading" constant="20" id="zaz-Qy-LRA"/>
@@ -212,7 +211,7 @@
                 <constraint firstItem="8eN-Mm-gkW" firstAttribute="trailing" secondItem="FDL-AT-6rC" secondAttribute="trailing" id="RP7-Av-nAH"/>
                 <constraint firstItem="8eN-Mm-gkW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="fdW-Ny-I1u"/>
             </constraints>
-            <point key="canvasLocation" x="-4326" y="-1999"/>
+            <point key="canvasLocation" x="-4540" y="-2000"/>
         </view>
     </objects>
     <resources>

@@ -25,6 +25,7 @@
 		634C6D4526D926D300757BA9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634C6D4426D926D300757BA9 /* Colors.swift */; };
 		634D5DCA26CFCE530037C0C6 /* TextInputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634D5DC926CFCE530037C0C6 /* TextInputFieldView.swift */; };
 		634D5DD426CFD1600037C0C6 /* TextInputFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634D5DD326CFD1600037C0C6 /* TextInputFieldView.xib */; };
+		636423F126E2377700406279 /* UITapGestureRecognizer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636423F026E2377700406279 /* UITapGestureRecognizer+Extension.swift */; };
 		63785D0A26CE6738002CB235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63785D0926CE6738002CB235 /* AppDelegate.swift */; };
 		63785D0C26CE6738002CB235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63785D0B26CE6738002CB235 /* SceneDelegate.swift */; };
 		63785D1326CE673A002CB235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63785D1226CE673A002CB235 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		634C6D4426D926D300757BA9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		634D5DC926CFCE530037C0C6 /* TextInputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputFieldView.swift; sourceTree = "<group>"; };
 		634D5DD326CFD1600037C0C6 /* TextInputFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputFieldView.xib; sourceTree = "<group>"; };
+		636423F026E2377700406279 /* UITapGestureRecognizer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+Extension.swift"; sourceTree = "<group>"; };
 		63785D0626CE6738002CB235 /* Landing Page.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Landing Page.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63785D0926CE6738002CB235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63785D0B26CE6738002CB235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				6336A44C26D3A45100FE3B90 /* UIView+Extensions.swift */,
 				633ACE1826DD12DE003BBE46 /* UserDefaults+Extensions.swift */,
 				633D347426DE4102009F9EFB /* Notifications+Extensions.swift */,
+				636423F026E2377700406279 /* UITapGestureRecognizer+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				63785D2126CE6CD2002CB235 /* LoginViewController.swift in Sources */,
 				634D5DCA26CFCE530037C0C6 /* TextInputFieldView.swift in Sources */,
 				634C6D4526D926D300757BA9 /* Colors.swift in Sources */,
+				636423F126E2377700406279 /* UITapGestureRecognizer+Extension.swift in Sources */,
 				843D4AF626DD6C2C006ECDBA /* WelcomeToAppViewController.swift in Sources */,
 				633D347526DE4102009F9EFB /* Notifications+Extensions.swift in Sources */,
 				633FBC9826D66B5100DBB485 /* ForgotPasswordModel.swift in Sources */,

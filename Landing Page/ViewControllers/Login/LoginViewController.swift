@@ -20,15 +20,18 @@ class LoginViewController: UIViewController {
   @IBOutlet private weak var viewForInputPasswordView: UIView!
   @IBOutlet private weak var passwordRecoveryButton: UIButton!
   @IBOutlet private weak var signInButton: UIButton!
-  @IBOutlet private weak var scanQRCodeButton: UIButton!
+  @IBOutlet private weak var scanQRCodeLabel: UILabel!
   @IBOutlet private weak var fieldForImageView: UIImageView!
   private var emailTextView: TextInputFieldView?
   private var passwordTextView: TextInputFieldView?
+  private let stringLinkForTapGesture = "scan QR code"
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     setValuesLoginViewController()
+    setupQRCodeLabel()
+    setupGestureRecognizers()
     
     let inputUsernameView: TextInputFieldView = TextInputFieldView.create()
     inputUsernameView.snapshot = .init(title: "username".uppercased(), leftImage: (UIImage(named: "user")?.withTintColor(myBlueColor, renderingMode: .alwaysOriginal))!, textPlaceholder: "your username")
@@ -43,9 +46,6 @@ class LoginViewController: UIViewController {
     inputPasswordView.translatesAutoresizingMaskIntoConstraints = false
     inputPasswordView.layoutAttachAll(to: viewForInputPasswordView)
     passwordTextView = inputPasswordView
-    
-    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
-    view.addGestureRecognizer(tapGesture)
   }
   
   @objc func tapGesture() {
@@ -62,19 +62,12 @@ class LoginViewController: UIViewController {
       showAlert(message: "Invalid email")
       return
     }
-    
-//    if passwordTextView!.getText()!.isEmpty {
-//      showAlert(message: "Invalid password")
-//      return
-//    }
+    guard let passwordText = passwordTextView?.text, !passwordText.isEmpty else {
+      showAlert(message: "Invalid password")
+      return
+    }
     UserDefaults.userEmail = emailText
-//    UserDefaults.userPassword = passwordTextView?.getText()
     NotificationCenter.default.post(name: .userDidSighIn, object: nil)
-  }
-  
-  @IBAction func scanQRCodeButton(_ sender: Any) {
-    //        let myVC = ForgotPasswordBuilder.viewController()
-    //        present(myVC, animated: true, completion: nil)
   }
 }
 
@@ -89,12 +82,9 @@ private extension LoginViewController {
     secondTitleLabel.font = UIFont.systemFont(ofSize: 28, weight: .heavy)
     thirdTitleLabel.text = "Make the school app \nyour personal assistant"
     thirdTitleLabel.font = UIFont.systemFont(ofSize: 17, weight: .thin)
-    
     passwordRecoveryButton.tintColor = myBlueColor
     signInButton.backgroundColor = myBlueColor
     signInButton.layer.cornerRadius = 10
-    scanQRCodeButton.tintColor = myBlueColor
-    
     fieldForImageView.image = UIImage(named: "back2")
   }
   
@@ -106,4 +96,36 @@ private extension LoginViewController {
                                   }))
     self.present(alert, animated: true, completion: nil)
   }
+  
+  func setupQRCodeLabel() {
+    let attributedString = NSMutableAttributedString()
+    let firstString = NSAttributedString(string: "or", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .regular),
+                                                                    NSAttributedString.Key.foregroundColor : UIColor.black])
+    let spaceString = NSAttributedString(string: " ")
+    let secondString = NSAttributedString(string: stringLinkForTapGesture, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .regular),
+                                                                    NSAttributedString.Key.foregroundColor : myBlueColor])
+    attributedString.append(firstString)
+    attributedString.append(spaceString)
+    attributedString.append(secondString)
+    scanQRCodeLabel.attributedText = attributedString
+  }
+  
+  func setupGestureRecognizers() {
+    scanQRCodeLabel.isUserInteractionEnabled = true
+    scanQRCodeLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(qrCodeTapAction(gesture:))))
+    
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
+    view.addGestureRecognizer(tapGesture)
+  }
+  
+  @objc func qrCodeTapAction(gesture: UITapGestureRecognizer) {
+    let text = self.scanQRCodeLabel.text as NSString?
+    guard let labelText = text else {return}
+    let range = labelText.range(of: stringLinkForTapGesture)
+    let result = gesture.didTapAttributedTextInLabel(label: self.scanQRCodeLabel, inRange: range)
+    if result {
+      showAlert(message: "You choosed scan QR code")
+    }
+  }
+  
 }
